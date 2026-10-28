@@ -1,30 +1,10 @@
 import { Component } from '@angular/core'
-import { FormsModule } from '@angular/forms'
+import { PromptList } from './prompts/prompt-list/prompt-list'
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.html',
   styleUrl: './app.scss',
-  imports: [FormsModule],
+  imports: [PromptList],
 })
-export class App {
-  a = 10
-  b = 11
-  people = [
-    {
-      id: 1,
-      name: 'Moussa',
-      age: 29
-    },
-    {
-      id: 2,
-      name: 'Bamby',
-      age: 22
-    },
-    {
-      id: 3,
-      name: 'Bousso',
-      age: 23
-    }
-  ]
-}
+export class App {}

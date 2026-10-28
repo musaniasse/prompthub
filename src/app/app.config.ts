@@ -2,7 +2,19 @@ import { ApplicationConfig, provideBrowserGlobalErrorListeners } from '@angular/
 import { provideRouter } from '@angular/router'
 
 import { routes } from './app.routes'
+import { providePrimeNG } from 'primeng/config';
+import Aura from '@primeuix/themes/aura';
+import { environment } from '../../environments/environment'
 
 export const appConfig: ApplicationConfig = {
-  providers: [provideBrowserGlobalErrorListeners(), provideRouter(routes)],
+  providers: [
+    provideBrowserGlobalErrorListeners(),
+    provideRouter(routes),
+    providePrimeNG({
+      license: environment.primeUiLicense,
+      theme: {
+        preset: Aura
+      }
+    })
+  ],
 }

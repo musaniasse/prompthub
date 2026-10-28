@@ -1,0 +1,12 @@
+<div style="border: 1px solid #ffffff; padding: 1rem;margin-bottom: 1rem;">
+  <div>
+    {{prompt().title}} par {{prompt().author.username}} <p-button label="Éditer" size="small" /> <button (click)="copyToClipboard()">Copier</button>
+  </div>
+  <textarea pTextarea readonly style="width: 100%" rows="8"> {{prompt().content}} </textarea>
+  <div>
+    <span>{{prompt().category.name}}</span>
+    <button>Upvote</button>
+    <span>{{prompt().score}}</span>
+    <button>Downvote</button>
+  </div>
+</div>
